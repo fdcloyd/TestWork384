@@ -24,8 +24,8 @@ Longitude: Text field for entering the city's longitude.
 Custom Taxonomy: Countries
 A custom taxonomy titled "Countries" is created and associated with the "Cities" post type.
 Users can categorize cities by their respective countries.
-City Weather Widget:
 
+City Weather Widget:
 A custom widget is created to display information about a selected city from the "Cities" custom post type.
 The widget shows the city's name and its current temperature, which is fetched using the WeatherStack API.
 Custom Template: Countries and Cities Table

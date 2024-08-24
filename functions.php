@@ -158,9 +158,15 @@ add_action('wp_ajax_city_search', 'city_search_ajax_handler');
 add_action('wp_ajax_nopriv_city_search', 'city_search_ajax_handler');
 
 function enqueue_city_search_scripts() {
-    wp_enqueue_script( 'custom-script',  get_stylesheet_directory_uri() . '/assets/js/city-search.js', array('jquery'), null, true );
+    wp_enqueue_script( 'city-search-script',  get_stylesheet_directory_uri() . '/assets/js/city-search.js', array('jquery'), null, true );
     wp_localize_script('city-search-script', 'citySearch', array(
         'ajax_url' => admin_url('admin-ajax.php')
     ));
 }
 add_action('wp_enqueue_scripts', 'enqueue_city_search_scripts');
+
+
+function custom_content_before_cities_table() {
+    echo '<div>Search:</</div>';
+}
+add_action('before_cities_table', 'custom_content_before_cities_table');

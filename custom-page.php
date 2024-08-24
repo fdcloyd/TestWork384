@@ -11,7 +11,7 @@ do_action('before_cities_table');
 // AJAX Search Form
 ?>
 <form id="city-search-form">
-    <input type="text" id="city-search" placeholder="Search for a city..." />
+    <input type="text" id="city-search" placeholder="Type Here to Search for a City..." />
 </form>
 
 <table id="cities-table">
